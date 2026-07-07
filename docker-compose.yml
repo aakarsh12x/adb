@@ -27,8 +27,11 @@ services:
     restart: always
     ports:
       - "27017:27017"
-    volumes:
-      - ${ADBREW_CODEBASE_PATH}/db/:/data/db
+    volumes: #changed the host path,to use dockers file system not win
+      - mongo_data:/data/db
     command: /usr/bin/mongod --bind_ip 0.0.0.0
+
+volumes:
+  mongo_data:
 
     
