@@ -1,3 +1,5 @@
+<img width="1011" height="609" alt="image" src="https://github.com/user-attachments/assets/85175e0e-1994-418d-acb7-5aba677c13c3" />
+
 1. Environment Setup
 
    1.1. Manually grabbed `libssl1.1` from the Buster archives because MongoDB 4.4 was refusing to install without it.
