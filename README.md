@@ -5,7 +5,7 @@
    1.1. Manually grabbed `libssl1.1` from the Buster archives because MongoDB 4.4 was refusing to install without it.
    1.2. Forced a Node.js v16 installation because `react-scripts` 4 crashes on Node 17+ with an export error.
    1.3. Pinned `pip` below v24.1 to work around the strict metadata validation errors caused by the outdated `celery==5.0.5` package in the requirements.
-
+   1.4. Switched the MongoDB data directory from a Windows host bind-mount to a Docker named volume (`mongo_data`) to prevent WiredTiger filesystem locking/crashing issues on Windows.
 2. Backend (`views.py`)
 
    2.1. Wrote the GET and POST endpoints using pure `pymongo` as requested, completely bypassing Django's models and ORM.
